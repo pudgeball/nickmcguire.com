@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Nick McGuire</title>
+		<meta name="description" content="The Personal Home of NickMcGuire">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/normalize.css">
+		<style>
+			h1, p {
+				font-family: "Futura", sans-serif;
+			}
+			
+			#list {
+				display: table;
+				margin: 0 auto;
+			}
+			#list ul {
+				min-width: 64px;
+				list-style: none;
+				padding-top: 20px;
+				padding-left: 0px;
+			}
+			#list ul li {
+				display: inline;
+				padding: 10px;
+			}
+			
+			.center {
+				text-align: center;
+			}
+			
+			#first_name {
+				color: red;
+			}
+			
+			#logo {
+				content: url(images/logo.png);
+				height: 135px;
+			 	width: 44px;
+			}
+			
+			@media all and (-webkit-min-device-pixel-ratio: 2) {
+				#logo {
+					content: url(images/logo@2x.png);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		{{ yield }}
+	</body>
+</html>
