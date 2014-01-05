@@ -17,9 +17,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
   config.vm.provision :shell, :path => "./vagrant/scripts/update_ubuntu.sh"
-  config.vm.provision :shell, :path => "./vagrant/scripts/install_go.sh"
+  config.vm.provision :shell, :path => "./vagrant/scripts/install_go.sh", :args => "/home/vagrant"
   config.vm.provision :shell, :path => "./vagrant/scripts/install_postgresql.sh"
   config.vm.provision :shell, :path => "./vagrant/scripts/setup_postgresql.sh"
   config.vm.provision :shell, :path => "./vagrant/scripts/install_nginx.sh"
-  config.vm.provision :shell, :path => "./vagrant/scripts/setup_nginx.sh", :args => "nickmcguire"
+  config.vm.provision :shell, :path => "./vagrant/scripts/setup_nginx.sh", :args => ["/vagrant/vagrant/config/nginx.conf", "nickmcguire"]
 end

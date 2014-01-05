@@ -2,7 +2,7 @@
 
 sudo apt-get -y install curl
 
-cd /home/vagrant
+cd $1
 
 curl -O https://go.googlecode.com/files/go1.1.linux-amd64.tar.gz
 
