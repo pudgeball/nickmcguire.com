@@ -1,4 +1,7 @@
-/* Overrides */
+body {
+	background-color: white;
+}
+
 h1, p {
 	font-family: Futura, Verdana, sans-serif;
 	margin: 0 0;
@@ -9,62 +12,72 @@ header {
 	margin-bottom: 2em;
 }
 
-a {
-	color: inherit;
-}
-
-/* Classes */
-.social {
-	margin: 5px;
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	border: 3px solid;
-	display: inline-block;
+header picture * {
+	width: 45px;
 }
 
 .center {
 	text-align: center;
 }
 
-/* IDs */
+.title {
+	padding-bottom: 5px;
+}
+
 #first_name {
 	color: red;
 }
 
-#logo {
-	content: url('/images/logo.png');
-	height: 135px;
- 	width: 44px;
-}
-
-#github-icon {
-	background-color: black;
-	content: url('/images/github.png');
-}
-
-#twitter-icon {
-	background-color: #4099FF;
-	content: url('/images/twitter.png');
-	border-color: #2F54E8;
-}
-
-#social-list {
-	width: 120px;
+#related-links {
 	margin: 2.5em auto;
 	text-align: center;
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 2) {
-	#logo {
-		content: url('/images/logo@2x.png');
+#related-links a {
+	color: inherit;
+	margin: 5px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	/* border: 3px solid; */
+	display: inline-block;
+}
+
+#related-links a img {
+	width: 16px;
+	height: inherit;
+	filter: invert(1);
+}
+
+#related-links #github {
+	background-color: black;
+}
+
+#related-links #linkedin {
+	background-color: #0077B5;
+	border-color: #0077B5;
+}
+
+#related-links #twitter {
+	background-color: #1DA1F2;
+	border-color: #1DA1F2;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
 	}
 
-	#github-icon {
-		content: url('/images/github@2x.png');
+	h1, p {
+		color: white;
 	}
 
-	#twitter-icon {
-		content: url('/images/twitter@2x.png');
+	#related-links #github {
+		background-color: white;
+		border-color: white;
+	}
+
+	#related-links #github img {
+		filter: invert(0) !important;
 	}
 }
