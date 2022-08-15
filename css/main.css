@@ -28,6 +28,18 @@ header picture * {
 	color: red;
 }
 
+#first_name.paddys {
+	color: #1FB25F;
+}
+
+#first_name.bday {
+	color: #DAA520;
+}
+
+#first_name.halloween {
+	color: #F4831B;
+}
+
 #related-links {
 	margin: 2.5em auto;
 	text-align: center;
